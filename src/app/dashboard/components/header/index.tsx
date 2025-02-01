@@ -11,7 +11,7 @@ export function DashboardHeader() {
                 </Link>
 
                 <Link href="/dashboard/customer" className="text-white hover:font-bold duration-200" >
-                    Clients
+                    Clientes
                 </Link>
             </header>
         </Container>
