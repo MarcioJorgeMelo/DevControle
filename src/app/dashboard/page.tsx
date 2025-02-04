@@ -57,7 +57,7 @@ export default async function Dashboard() {
                     )}
 
                     {orders.length === 0 && (
-                        <h2>Você não possui chamados em abertos</h2>
+                        <h1 className="px-2 md:px-0 text-gray-600">Você não possui chamados em abertos</h1>
                     )}
                 </table>
             </main>
