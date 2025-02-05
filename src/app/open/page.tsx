@@ -15,7 +15,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-interface CustomerDataInfo {
+export interface CustomerDataInfo {
     id: string;
     name: string;
 }
@@ -34,7 +34,7 @@ export default function OpenOrder() {
     }
 
     async function handleSearchCustomer(data: FormData) {
-        const response = await api.get("/api/open", {
+        const response = await api.get("/api/customer", {
             params: {
                 email: data.email
             }
@@ -92,7 +92,7 @@ export default function OpenOrder() {
                     </form>
                 )}
 
-                {customer !== null && <FormOrder />}
+                {customer !== null && <FormOrder customer={customer} />}
             </main>
         </div>
     )
