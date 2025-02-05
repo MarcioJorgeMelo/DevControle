@@ -28,6 +28,9 @@ export function FormOrder({ customer }: FormDataProps) {
             description: data.description,
             customerId: customer.id
         })
+
+        setValue("name", "");
+        setValue("description", "");
     }
 
     return (
